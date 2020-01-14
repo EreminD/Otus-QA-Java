@@ -84,6 +84,6 @@ public class CookieTest extends BaseTest {
 
 
 
-    public static final String PASS = "Helloworld1";
+    public static final String PASS = "wrong";
 }
 
