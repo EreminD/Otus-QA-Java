@@ -9,8 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class CookieTest extends BaseTest {
-    private static final Logger logger = LogManager.getLogger(CookieTest.class);
+public class CookieTest1 extends BaseTest {
+    private static final Logger logger = LogManager.getLogger(CookieTest1.class);
 
     @Test
     public void getCookies() {
@@ -67,23 +67,6 @@ public class CookieTest extends BaseTest {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public static final String PASS = "wrong";
+    private static final String PASS = "wrong pass";
 }
 
