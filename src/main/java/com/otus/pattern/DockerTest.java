@@ -5,6 +5,7 @@ import org.junit.Test;
 
 public class DockerTest {
     private TestSteps steps;
+
     @Before
     public void setUp(){
         steps = new TestSteps();

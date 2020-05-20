@@ -13,9 +13,9 @@ import static org.hamcrest.CoreMatchers.equalTo;
 @RunWith(value = Parameterized.class)
 public class ParameterizedTest {
 
-    private int numberA;
-    private int numberB;
-    private int expected;
+    private final int numberA;
+    private final int numberB;
+    private final int expected;
 
     // Inject via constructor
     // for {8, 2, 10}, numberA = 8, numberB = 2, expected = 10

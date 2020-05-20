@@ -16,7 +16,6 @@ public class Tester2 {
 
     @Before
     public void setUp(){
-
         notifier.add(new NotifierEmail());
         notifier.add(new NotifierSms());
         notifier.add(new NotifierSlack());

@@ -17,7 +17,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class TestSteps {
     private WebDriver driver;
 
-
     void checkResultListSize(int i) {
         int imagesOnPage = driver.findElements(byTestId("imageSearchResult")).size();
         assertThat("На странице меньше 26 результатов", imagesOnPage, equalTo(26));
@@ -30,7 +29,7 @@ public class TestSteps {
 
     void openBrowserOn(String url) {
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        driver = new WebDriverLogger();
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         driver.get(url);
     }
@@ -39,4 +38,5 @@ public class TestSteps {
         String title = driver.getCurrentUrl();
         assertThat("title не содержит 'selenoid'", title, containsString(s));
     }
+
 }

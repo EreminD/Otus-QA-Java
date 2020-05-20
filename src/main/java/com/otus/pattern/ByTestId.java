@@ -12,7 +12,7 @@ public class ByTestId extends By {
 
     private ByTestId(String dataTestId) {
         this.dataTestId = dataTestId;
-        String cssSelector = "[data-testid='"+dataTestId+"']";
+        String cssSelector = "[data-testid='" + dataTestId + "']";
         byCssSelector = new ByCssSelector(cssSelector);
     }
 
@@ -22,7 +22,7 @@ public class ByTestId extends By {
 
     @Override
     public String toString() {
-        return "By.testId: " + byCssSelector;
+        return "By.testId: " + dataTestId;
     }
 
     @Override

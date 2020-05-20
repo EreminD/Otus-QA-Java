@@ -1,7 +1,6 @@
 package com.otus.pattern.strategy;
 
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -11,14 +10,13 @@ public class Tester {
 
     private Notifier notifier;
 
-    @Before
-    public void setUp(){
-        notifier = new NotifierEmail();
+    public Tester(Notifier notifier) {
+        this.notifier = notifier;
     }
 
     @After
     public void sendNotification(){
-        notifier.notify("Finished");
+        notifier.notify("hello");
     }
 
     @Test

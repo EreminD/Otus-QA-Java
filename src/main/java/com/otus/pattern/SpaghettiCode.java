@@ -1,10 +1,12 @@
 package com.otus.pattern;
 
 import com.otus.webdriver.configuration.WindowHandlingTest;
+import com.sun.org.glassfish.gmbal.Description;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -60,12 +62,17 @@ public class SpaghettiCode {
         logger.info("Current: {}", driver.getWindowHandle());
     }
 
-    @Test
-    public void anotherOneSpaghettiTest(){
+
+    @Before
+    public void setTestUp(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
 
+    }
+
+    @Test
+    public void anotherOneSpaghettiTest(){
         driver.get("https://hub.docker.com");
         driver.findElement(By.cssSelector("[data-testid='autocompleteInput']"))
                 .sendKeys("selenoid", Keys.RETURN);
